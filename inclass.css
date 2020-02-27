@@ -1,0 +1,75 @@
+* {
+    font-family: sans-serif;
+}
+
+
+h2 {
+    font-size: 2 em;
+    color: blue;
+    font-family: fantasy;
+}
+
+header {
+    background-color: greenyellow;
+}
+
+
+.work {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: #f5f5f5;
+    font-size: 3em;
+    font-weight: 700;
+}
+
+p, ul, ol{
+    color: dodgerblue;
+    font-size: 1.25em;
+    line-height: 1.75em;
+}
+
+
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.siteid {
+    grid-column: 1 / span 12;
+}
+
+nav {
+    grid-column: 7 / span 12;
+    background-color: red;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+}
+
+.hero {
+    grid-column: 1 / span 12;
+}
+
+.work {
+    grid-column: 1 / span 12;
+}
+
+article {
+    grid-column: 3 / span 6;
+}
+
+aside {
+    grid-column: 9 / span 4;
+}
+
+
+footer {
+    grid-column: 1 / span 12;
+}
