@@ -1,60 +1,71 @@
-video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0;
-  left: 0;
+header{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    color: white;
+    margin-left: 30px;
+    padding: 20px;
 }
 
-html, body {
-  height: 100%;
-  overflow-x: hidden;
+.siteid{
+    grid-column: 1 / span 6;
 }
+
+nav{
+     grid-column: 8 / span 5;
+    margin-top: 20px;
+}
+
+
+.navbar {  
+  display: flex;
+  list-style:none;
+}
+
+.navbar > li {  
+  flex: 1;  
+}
+
+
+@media all and (max-width: 600px) {  
+    
+  .navbar {  
+    flex-wrap: wrap;  
+  }  
+    
+  .container > li {  
+    flex-basis: 50%;  
+  }
+
+}
+
+@media all and (max-width: 400px) {  
+  .navbar > li {  
+    flex-basis: 100%;  
+  }  
+  .search {  
+    order: 1;  
+  }  
+}
+
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+.blue {
+    background-color: royalblue;
+}
+
 
 body {
-  margin: 0;
-}
-
-.viewport-header {
-  position: relative;
-  height: 100vh;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-h1 {
-  font-family: 'Syncopate', sans-serif;
-  color: white; text-shadow: black 0.1em 0.1em 0.2em;
-  text-transform: uppercase;
-  letter-spacing: 3vw;
-  line-height: 1.2;
-  font-size: 3.5vw;
-  text-align: center;
-  span {
-    display: block;
-    font-size: 10vw;
-    letter-spacing: -1.3vw;
-  }
-}
-
-main {
   background-image: url(../images/email.png);
-  position: relative;
-  padding: 1rem;
-  &::before {
-    content: "";
-    @include coverer;
-    top: -100vh;
-  }
-  p {
-    max-width: 600px;
-    margin: 1rem auto;
-  }
 }
 
+p {
+    font-family: georgia;
+}
 
 .container {
     display: grid;
